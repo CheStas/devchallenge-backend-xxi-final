@@ -1,0 +1,17 @@
+version: '3.8'
+
+name: ddc0436a4d58
+
+services:
+  app:
+    container_name: ddc0436a4d58
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: development
+    environment:
+      PORT: '8080'
+    ports:
+      - '8080:8080'
+    volumes:
+      - .:/usr/src/app
